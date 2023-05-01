@@ -1,0 +1,217 @@
+
+
+/*CSS RESET*/
+
+
+
+*,*::before, *:after{
+  box-sizing: inherit;
+}
+
+body{
+  width: 80%;   
+  height: 550px;
+  font-family: "Montserrat", sans-serif ;  
+  line-height: 1;
+  background-color: rgba(245, 239, 239, 0.308);  
+  margin-left: 15rem;
+}
+
+
+.contenedor{    
+  position: relative;
+  max-width: 85rem;
+  width: 90%;     
+  background-color: white;  
+  padding: 2rem 5rem;
+  margin-top: .5rem;    
+  box-shadow:  0 5px 10px rgba(0, 0, 0, 0.5);
+  perspective: 2700px;
+  border-radius: 1rem;
+}
+
+.contenedor .cover{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width:50%;    
+  z-index: 98;
+  transition: all 1s ease;
+  transform-origin: left;
+  transform-style: preserve-3d;
+}
+
+
+
+
+.contenedor .cover img{
+  position:absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index:12;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+}
+
+
+.contenedor form{
+  height: 100%;
+  width: 100%;   
+  
+}
+
+.form-content .login-form{
+  width: calc(100% / 2 - 25px);
+}
+
+form .form-content .title{
+  position: relative;
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #333;
+  text-align: center;
+}
+
+
+form .signup-form .form-content .title:before{
+  width: 2rem;
+}
+
+form .form-content .input-boxes{
+  margin-top: 3rem;
+}
+
+form .form-content .input-box{
+  display: flex;
+  align-items: center;
+  height: 4rem ;
+  width: 90%;
+  margin: 1rem 0;
+  position: relative;
+}
+
+form .form-content .text{
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #333;
+}
+
+form .form-content .text a{
+  color:  #333;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+form .form-content .text a:hover{
+  text-decoration: underline;
+  color: rgb(20, 50, 182);
+}
+
+.form-content .input-box input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 0 1rem;
+  font-size: 1.5rem;    
+  border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+.form-content .input-box input:focus{
+  border-color: rgb(0, 102, 255);
+}
+
+form .form-content .button{
+  margin-top: 4rem;
+}
+
+
+form .form-content .button input{
+  color: white;
+  background: rgb(0, 102, 255);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+form .form-content .button input:hover{
+  background-color: rgb(7, 72, 192);
+}
+
+form .form-content label{
+  color: rgb(20, 50, 182);
+  cursor: pointer;
+}
+
+form .form-content label:hover{
+  text-decoration: underline;
+}
+
+form .form-content .text{
+  font-size: 1.2rem;
+}
+
+
+@media(max-width:1090px){
+  body{
+     
+      margin-left: 4rem;
+  }
+  .contenedor{  
+      width:100%;
+      padding: 2rem 2rem;
+      
+  }
+  
+  
+  form .form-content .input-box{
+      display: flex;
+      align-items: center;
+      height: 4rem ;
+      width: 100%;
+     
+      position: relative;
+  }
+
+  .form-content .input-box input{
+      height: 100%;
+      width: 100%;
+      outline: none;
+      border: none;
+      padding: 0 1rem;
+      font-size: 1.2rem;    
+      border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+  }
+  .contenedor .cover{
+      display: none;
+  }
+  .form-content .login-form,
+  .form-content .signup-form{
+
+  width: 100%;
+  }
+  .form-content .signup-form{
+      display: none;
+  }
+  .contenedor #flip:checked ~ form .signup-form{
+      display: block;
+  }
+  .contenedor #flip:checked ~ form .login-form{
+      display:none;
+  }
+
+  form .form-content .button input{
+     font-size: 1.8rem;
+  }
+
+  form .form-content .text{
+      font-size: 1.2rem;
+  }
+
+
+}
+
+
+

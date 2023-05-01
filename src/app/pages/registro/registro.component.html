@@ -1,0 +1,69 @@
+<body>
+  <div *ngIf="!loading" class="container">
+    <div class="title">Registrate aqui</div>
+    <div class="content">
+      <form (ngSubmit)="registrar()"  [formGroup]="registrarUsuario" >
+        <div class="user-details">
+         
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input 
+            type="email"
+           formControlName="email"
+            name="email" 
+            placeholder="Digite su email" 
+           >
+           <span *ngIf="registrarUsuario.get('email')?.hasError('required') && registrarUsuario.get('email')?.touched" class="text-danger" style="margin-left: 5px;">
+            El <strong>correo</strong> es requerido
+           </span>
+           <span *ngIf="registrarUsuario.get('email')?.hasError('email') && registrarUsuario.get('email')?.touched" class="text-danger" style="margin-left: 5px;">
+            El <strong>correo</strong> es invalido
+           </span>
+          </div>          
+
+          <div class="input-box">
+            <span class="details">Contraseña</span>
+            <input 
+            type="password" 
+            name="password"
+            formControlName="password"
+            placeholder="Digite su contraseña" 
+            >
+            <span *ngIf="registrarUsuario.get('password')?.hasError('required') && registrarUsuario.get('password')?.touched" class="text-danger" style="margin-left: 5px;">
+              El <strong>password</strong> es requerido
+             </span>
+
+             <span *ngIf="registrarUsuario.get('password')?.hasError('minlength') && registrarUsuario.get('password')?.touched" class="text-danger" style="margin-left: 5px;">
+              El <strong>password</strong> debe tener mínimo 6 caracteres
+             </span>
+          </div>
+         
+         <div class="boton-facebook">
+          <i class="fa fa-facebook"></i>
+          <p>Continua con Facebook</p> 
+         </div>
+         <div class="boton-google">
+          <i class="fa fa-google"></i>
+          <p>Continua con Google</p>
+         </div>
+
+
+          </div>
+
+       
+        <div class="button" >
+          <input type="submit" [disabled]="registrarUsuario.invalid"  value="Registrar">
+        </div>
+
+        <div class="text text-login">
+          Ya tienes cuenta? <a routerLink="/login">Inicia Sesión</a>
+        </div>
+        
+      </form>
+      
+    </div>
+    
+  </div>
+  <app-spinner *ngIf="loading"></app-spinner>
+ 
+</body>

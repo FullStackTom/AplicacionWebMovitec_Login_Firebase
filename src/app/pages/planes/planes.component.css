@@ -1,0 +1,100 @@
+
+.titulo{
+    color: rgb(0, 110, 255);
+    padding: 20px 0;
+    
+}
+.titulo h1{
+    font-size: 50px;
+}
+
+
+/*PRODUCTOS*/
+
+
+.productos{
+     
+    width: 100%;
+    padding: 0;    
+    margin: 0;    
+    text-align: center;
+    
+   }
+   
+   .cards{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+    padding:20px 0;
+
+    
+   }
+   .card {
+    width: 300px;
+    height: 700px;
+    padding: 20px 10px;
+    align-items: center;
+    align-content: center;
+    padding-left: 20px;
+    gap: 20px;
+    border-radius: 20px;   
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.3);
+    
+   }
+   
+   .card .icono img{
+    width: 100px; 
+    height: 100px; 
+  
+   
+ }
+ .card .info p{
+    text-align: center;
+    margin-right: 20px;
+    font-size: 15px;
+    font-weight: bold;
+ }
+ 
+
+ .card .info a{
+    background: rgb(0, 110, 255);
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 8px 40px;
+    border-radius: 15px;
+    margin-right: 20px;
+    margin-top: 20px;
+    
+}
+
+.card .info a:hover{
+    background:  linear-gradient(144deg,#0408e9, #0857be 50%,#00DDEB);
+   
+}
+.card .info .subtitulo{
+    font-size: 2rem;
+}
+.precio{
+    font-size: 20px;
+    
+    
+}
+
+.velocidad{
+   color: #8a8a8d;
+   font-style: italic;
+   text-decoration: line-through;
+}
+
+/*RESPONSIVE CARDS PLANES*/
+@media screen and (max-width: 600px){
+   .productos{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+
+   }
+}

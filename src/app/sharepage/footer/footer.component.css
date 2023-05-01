@@ -1,0 +1,114 @@
+.footer{
+    width: 100%;    
+    background-color: #0a141d;
+    padding: 0 ;
+    margin: 20px 0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.footer .grupo1{
+    color: white;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 50px;
+    padding: 45px 0px;    
+}
+
+label{
+    font-size: 40px;
+    font-weight: bold;
+}
+h2{
+    font-size: 30px;
+}
+.container2 p{
+    text-align: justify;
+    font-size: 11px;
+}
+.container3{
+    padding-left: 80px;}
+
+.container3 h2{
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+
+
+.box_sociales a{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    margin-right: 10px;
+    background-color: rgb(65, 66, 66);
+    text-align: center;
+    border-radius: 5px;
+}
+
+.box_sociales .facebook:hover{
+    color: white;
+    background-color: rgb(18, 47, 216);
+    transform: scale(1.1);
+    transition: .5s;
+}
+.box_sociales .twitter:hover{
+    color: white;
+    background-color: rgb(22, 109, 240);
+    transform: scale(1.1);
+    transition: .5s;
+}
+.box_sociales .instagram:hover{
+    color: white;
+    background-color: rgb(224, 17, 179);
+    transform: scale(1.1);
+    transition: .5s;
+}
+.box_sociales .youtube:hover{
+    color: white;
+    background-color: rgb(212, 7, 7);
+    transform: scale(1.1);
+    transition: .5s;
+}
+
+.grupo2{
+    color: white;
+    text-align: center;
+    padding: 15px 10px;
+    background-color: #0a1a2a;
+    font-size: 15px;
+}
+.grupo2 span{
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+@media  screen and (max-width:1036px) {
+    .footer .grupo1{
+        color: white;        
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 30px;
+        padding: 35px 0px;    
+        align-items: center;
+        align-content: center;
+        justify-content: space-between;
+        text-align: center;
+    }
+    .container2 p{
+        text-align: center;
+        font-size: 11px;
+    }
+    
+    .container3{
+        padding-right: 50px;
+    }
+    .box_sociales{
+        padding-top: 5px;
+    }
+}

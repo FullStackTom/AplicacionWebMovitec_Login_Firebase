@@ -1,0 +1,28 @@
+
+<body>
+
+  <header>
+    <p class="logo">Tom<span>Dev</span></p>
+
+    <input type="checkbox" name="" id="menu" />
+    <label for="menu" class="fas fa-bars"></label>
+
+    <nav class="navbar">
+      <a routerLink="">Inicio</a>
+            <a routerLink="planes">Planes</a>
+            <a
+              *ngIf="isLoggedIn && email === 'tolortegui@gmail.com'"
+              routerLink="dashboard-admin"
+              >Dashboard</a
+            >
+            <a *ngIf="!isLoggedIn" routerLink="about">Acerca de Nosotros</a>
+            <a *ngIf="!isLoggedIn" routerLink="contact">Contacto</a>
+            <a *ngIf="!isLoggedIn" routerLink="login">Iniciar Sesión</a>
+            <a *ngIf="isLoggedIn" (click)="logOut()" style="cursor: pointer"
+              >Cerrar Sesión</a
+            >
+    </nav>
+  </header>
+
+
+</body>

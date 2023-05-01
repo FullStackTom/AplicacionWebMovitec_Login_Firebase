@@ -1,0 +1,21 @@
+.wrapper{
+display: flex;
+align-items: center;
+justify-content: center;
+height: 60%;
+
+}
+
+.body{
+    text-align: center;
+    width: 20%;
+    margin: 0;
+
+}
+.body h2{
+    font-size: 30px;
+}
+
+.body btn{
+    width: 100px;
+}

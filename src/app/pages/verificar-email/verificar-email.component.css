@@ -1,0 +1,16 @@
+.body{
+    height: 550px;
+    text-align: center;
+}
+.body i{
+    padding-top: 80px;
+    font-size: 100px;
+}
+
+.body h3{
+    font-size: 30px;
+}
+
+button{
+    margin-top: 20px;
+}

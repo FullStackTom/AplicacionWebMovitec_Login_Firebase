@@ -1,0 +1,61 @@
+<body>
+  <main *ngIf="!loading" class="contenedor">
+    <div  class="cover">
+      <img src="../../../assets/img/login.jpg" alt="" />
+    </div>
+
+    <form (ngSubmit)="login()" [formGroup]="loginUsuario">
+      <div class="form-content">
+        <div class="login-form">
+          <div class="title">Inicio de Sesión</div>
+          <div class="input-boxes">
+            <div class="input-box">
+              <input
+                type="email"
+                name="email"
+                formControlName="email"
+                required
+                matInput
+                placeholder="Ingrese su nombre de usuario"
+              />
+              
+            </div>
+            <span *ngIf="loginUsuario.get('email')?.hasError('required') && loginUsuario.get('email')?.touched" class="text-danger" style="margin-left: 5px;">
+              El <strong>correo</strong> es requerido
+             </span>
+             <span *ngIf="loginUsuario.get('email')?.hasError('email') && loginUsuario.get('email')?.touched" class="text-danger" style="margin-left: 5px;">
+              El <strong>correo</strong> es invalido
+             </span>
+            <div class="input-box">
+              <input
+                type="password"
+                name="password"
+                formControlName="password"
+                required
+                placeholder="Ingrese su contraseña"
+              />
+              
+            </div>
+            <span *ngIf="loginUsuario.get('password')?.hasError('required') && loginUsuario.get('password')?.touched" class="text-danger" style="margin-left: 5px;">
+              El <strong>password</strong> es requerido
+             </span>
+            <div class="text mt20">
+              <a routerLink="/recuperar-contrasenia" style="color: blue;">Olvidaste tu contraseña?</a>
+            </div>
+
+            <div class="button input-box">
+              <input type="submit" [disabled]="loginUsuario.invalid" value="Iniciar" />
+            </div>
+            <div class="text text-login">
+              No tienes cuenta? <a routerLink="/registro" style="color: blue;">Registrate aqui</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    
+  </main>
+  <app-spinner *ngIf="loading"></app-spinner>
+</body>
+
+  
